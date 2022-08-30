@@ -1,4 +1,4 @@
-## Interview task: Basket Service
+`## Interview task: Basket Service
 
 Our team is implementing a Basket Service to calculate the cost of subscriptions that the 
 customer wishes to buy.
@@ -43,4 +43,12 @@ Then a successful respobse is returned with £29.98 as the charge
 
 ### Part 2 - Enhance Basket Service to use Customer Service
 
-we would now like you to enhance the "# Interviews" 
+we would now like you to enhance the Basket Service to additionally accept a customerId. The customerService is used to
+retireve customer subscriptions. Similary to the SubscritionService you are not expected to implement this, consider
+it a third party. Also, another type of subscription has been introduced : BOOST £1.99 ( can only be added, if the customer has 
+another subscription)
+
+Scenario: Successful basket calculation of a BOOST subscription. 
+Given the customer has an existing ENTERTAINMENT subscription. And the customer wants to purchase a BOOST subscription, When the basket 
+is calculated Then a successful response is returned with £1.99 as the charge.
+
